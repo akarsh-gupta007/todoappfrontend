@@ -2,7 +2,7 @@ import axios from 'axios';
 import { ADDNEW_TODO, GETALL_TODO, TOGGLE_TODO, UPDATE_TODO, DELETE_TODO, TOGGLE_TAB } from './type';
 export const addNewTodo = (data) => async (dispatch) => {
     try {
-        const res = await axios.post("https://todo-u2kw.onrender.com/todos", { data });
+        const res = await axios.post("https://todo-u2kw.onrender.com/createTodos", { data });
 
         dispatch({ type: ADDNEW_TODO , payload: res.data });
     } catch (error) {
